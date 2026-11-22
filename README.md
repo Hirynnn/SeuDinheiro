@@ -13,12 +13,36 @@
 
 **Sistema ERP financeiro SaaS comercial para pequenas e médias empresas com partidas dobradas, isolamento multi-tenant estrito, conciliação bancária por CSV com auto-match, fluxo de caixa e relatórios contábeis.**
 
-[Demonstração Rápida](#-início-rápido-passo-a-passo) • [Arquitetura](#-arquitetura-e-decisões-de-engenharia) • [Modelo de Dados](#-modelo-de-dados-e-diagrama-er) • [Regras Financeiras](#-regras-financeiras-e-precisão-decimal) • [Endpoints da API](#-guia-de-endpoints-da-api)
+<br />
+
+[⚡ Início Rápido](#inicio-rapido) • [🏛️ Arquitetura](#arquitetura) • [🗄️ Modelo de Dados](#modelo-de-dados) • [💼 Módulos](#modulos) • [📡 Endpoints da API](#endpoints-api) • [🧪 Testes](#testes)
 
 </div>
 
 ---
 
+## 📑 Sumário
+
+- [1. Visão Geral do Projeto](#visao-geral)
+- [2. Stack Tecnológica](#stack-tecnologica)
+- [3. Arquitetura e Decisões de Engenharia](#arquitetura)
+- [4. Modelo de Dados e Diagrama ER](#modelo-de-dados)
+- [5. Módulos do Sistema](#modulos)
+- [6. Estrutura de Pastas](#estrutura-de-pastas)
+- [7. Início Rápido (Passo a Passo)](#inicio-rapido)
+  - [Opção A: Executando com Docker](#opcao-a-docker)
+  - [Opção B: Executando Sem Docker (Nuvem Gratuita)](#opcao-b-sem-docker)
+  - [Inicializando o Backend](#inicializando-backend)
+  - [Inicializando o Frontend](#inicializando-frontend)
+- [8. Credenciais de Acesso (Usuário Demo)](#credenciais-demo)
+- [9. Guia de Endpoints da API](#endpoints-api)
+- [10. Execução de Testes Automatizados](#testes)
+- [11. Segurança](#seguranca)
+- [12. Licença](#licenca)
+
+---
+
+<a id="visao-geral"></a>
 ## 📌 1. Visão Geral do Projeto
 
 O **SeuDinheiro** é um ERP financeiro web completo, projetado e desenvolvido para simular um produto **SaaS comercial real**. A plataforma permite que diferentes empresas gerenciem suas finanças de maneira 100% isolada e segura, com seus próprios colaboradores, permissões de acesso (RBAC), contas bancárias, clientes, fornecedores e lançamentos operacionais e contábeis.
@@ -33,6 +57,7 @@ O projeto foi construído para superar os tradicionais "CRUDs básicos", impleme
 
 ---
 
+<a id="stack-tecnologica"></a>
 ## 🛠️ 2. Stack Tecnológica
 
 ### Backend
@@ -62,6 +87,7 @@ O projeto foi construído para superar os tradicionais "CRUDs básicos", impleme
 
 ---
 
+<a id="arquitetura"></a>
 ## 🏛️ 3. Arquitetura e Decisões de Engenharia
 
 O projeto é organizado como um **Monorepo limpo**, separando claramente as responsabilidades de backend, frontend e documentação técnica:
@@ -106,6 +132,7 @@ graph TD
 
 ---
 
+<a id="modelo-de-dados"></a>
 ## 🗄️ 4. Modelo de Dados e Diagrama ER
 
 A modelagem de dados foi desenhada para garantir escalabilidade e integridade referencial:
@@ -146,6 +173,7 @@ erDiagram
 
 ---
 
+<a id="modulos"></a>
 ## 💼 5. Módulos do Sistema
 
 ### 5.1. Autenticação & Multi-Tenancy (`src/auth/`)
@@ -202,6 +230,7 @@ erDiagram
 
 ---
 
+<a id="estrutura-de-pastas"></a>
 ## 📁 6. Estrutura de Pastas
 
 ```text
@@ -261,6 +290,7 @@ SeuDinheiro/
 
 ---
 
+<a id="inicio-rapido"></a>
 ## 🚀 7. Início Rápido (Passo a Passo)
 
 ### Pré-requisitos
@@ -270,6 +300,7 @@ SeuDinheiro/
 
 ---
 
+<a id="opcao-a-docker"></a>
 ### Opção A: Executando com Docker (Recomendado)
 
 Se você tem o **Docker Desktop** instalado:
@@ -287,6 +318,7 @@ Se você tem o **Docker Desktop** instalado:
 
 ---
 
+<a id="opcao-b-sem-docker"></a>
 ### Opção B: Executando Sem Docker (Nuvem Gratuita)
 
 Se você **não** tem o Docker instalado no computador:
@@ -303,6 +335,7 @@ Se você **não** tem o Docker instalado no computador:
 
 ---
 
+<a id="inicializando-backend"></a>
 ### 3. Rodando as Migrations e Inicializando o Backend
 
 No terminal, acesse a pasta do backend e execute os comandos:
@@ -330,6 +363,7 @@ npm run start:dev
 
 ---
 
+<a id="inicializando-frontend"></a>
 ### 4. Inicializando o Frontend
 
 Abra uma **nova janela do terminal**, acesse a pasta do frontend e execute:
@@ -349,6 +383,7 @@ npm run dev
 
 ---
 
+<a id="credenciais-demo"></a>
 ## 🔑 8. Credenciais de Acesso (Usuário Demo)
 
 O seed inicial já cria uma empresa completa com dados de demonstração:
@@ -362,6 +397,7 @@ O seed inicial já cria uma empresa completa com dados de demonstração:
 
 ---
 
+<a id="endpoints-api"></a>
 ## 📡 9. Guia de Endpoints da API
 
 A documentação interativa Swagger está disponível em `http://localhost:3000/api/docs`. Abaixo estão os principais endpoints agrupados:
@@ -401,6 +437,7 @@ A documentação interativa Swagger está disponível em `http://localhost:3000/
 
 ---
 
+<a id="testes"></a>
 ## 🧪 10. Execução de Testes Automatizados
 
 O sistema conta com suíte de testes unitários para validar a lógica de negócios e as regras financeiras:
@@ -425,6 +462,7 @@ npm run test:cov
 
 ---
 
+<a id="seguranca"></a>
 ## 🔒 11. Segurança
 
 O projeto segue as diretrizes da **OWASP Top 10**:
@@ -437,7 +475,8 @@ O projeto segue as diretrizes da **OWASP Top 10**:
 
 ---
 
-## 📄 Licença
+<a id="licenca"></a>
+## 📄 12. Licença
 
 Este projeto foi desenvolvido para fins educacionais e de demonstração de competências de engenharia de software para vagas de **Desenvolvedor Full Stack** e **Desenvolvedor Backend**.
 
