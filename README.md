@@ -306,13 +306,13 @@ SeuDinheiro/
 Se você tem o **Docker Desktop** instalado:
 
 1. Suba os contêineres do PostgreSQL e Redis em segundo plano:
-   ```powershell
-   cd "C:\Users\aguia\OneDrive\Desktop\Trabalhos- Portifolio\SeuDinheiro"
+   ```bash
+   cd SeuDinheiro
    docker compose up -d
    ```
 
 2. Copie o arquivo de variáveis de ambiente do backend:
-   ```powershell
+   ```bash
    cp .env.example backend/.env
    ```
 
@@ -340,8 +340,8 @@ Se você **não** tem o Docker instalado no computador:
 
 No terminal, acesse a pasta do backend e execute os comandos:
 
-```powershell
-cd "C:\Users\aguia\OneDrive\Desktop\Trabalhos- Portifolio\SeuDinheiro\backend"
+```bash
+cd backend
 
 # 1. Instalar as dependências
 npm install
@@ -368,8 +368,8 @@ npm run start:dev
 
 Abra uma **nova janela do terminal**, acesse a pasta do frontend e execute:
 
-```powershell
-cd "C:\Users\aguia\OneDrive\Desktop\Trabalhos- Portifolio\SeuDinheiro\frontend"
+```bash
+cd frontend
 
 # 1. Instalar as dependências
 npm install
@@ -442,8 +442,8 @@ A documentação interativa Swagger está disponível em `http://localhost:3000/
 
 O sistema conta com suíte de testes unitários para validar a lógica de negócios e as regras financeiras:
 
-```powershell
-cd "C:\Users\aguia\OneDrive\Desktop\Trabalhos- Portifolio\SeuDinheiro\backend"
+```bash
+cd backend
 
 # Executar todos os testes unitários
 npm test
