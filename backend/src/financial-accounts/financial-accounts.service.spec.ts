@@ -6,7 +6,7 @@ import { PrismaService } from '../prisma/prisma.service';
 describe('FinancialAccountsService (Transferências)', () => {
   let service: FinancialAccountsService;
 
-  const mockPrisma = {
+  const mockPrisma: any = {
     financialAccount: {
       create: jest.fn(),
       findMany: jest.fn(),
@@ -16,7 +16,7 @@ describe('FinancialAccountsService (Transferências)', () => {
     transaction: {
       create: jest.fn(),
     },
-    $transaction: jest.fn((callback) => callback(mockPrisma)),
+    $transaction: jest.fn((callback: (tx: any) => any) => callback(mockPrisma)),
   };
 
   beforeEach(async () => {

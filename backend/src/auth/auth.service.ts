@@ -222,7 +222,7 @@ export class AuthService {
     }
 
     // Resolver a empresa ativa
-    let selectedMembership = user.memberships[0];
+    let selectedMembership: any = user.memberships[0];
     if (dto.companyId) {
       selectedMembership = user.memberships.find(
         (m) => m.companyId === dto.companyId,
@@ -435,7 +435,7 @@ export class AuthService {
     const payload = { sub: userId, email, companyId, role };
 
     const accessToken = await this.jwt.signAsync(payload, {
-      expiresIn: this.config.get<string>('JWT_EXPIRES_IN', '15m'),
+      expiresIn: (this.config.get<string>('JWT_EXPIRES_IN') || '15m') as any,
     });
 
     const rawRefreshToken = crypto.randomBytes(32).toString('hex');

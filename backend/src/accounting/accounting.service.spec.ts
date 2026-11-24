@@ -7,7 +7,7 @@ describe('AccountingService (Partidas Dobradas)', () => {
   let service: AccountingService;
   let prisma: PrismaService;
 
-  const mockPrisma = {
+  const mockPrisma: any = {
     accountingAccount: {
       findMany: jest.fn(),
       findUnique: jest.fn(),
@@ -17,7 +17,7 @@ describe('AccountingService (Partidas Dobradas)', () => {
       create: jest.fn(),
       findMany: jest.fn(),
     },
-    $transaction: jest.fn((callback) => callback(mockPrisma)),
+    $transaction: jest.fn((callback: (tx: any) => any) => callback(mockPrisma)),
   };
 
   beforeEach(async () => {

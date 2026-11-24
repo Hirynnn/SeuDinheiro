@@ -15,7 +15,42 @@
 
 <br />
 
-[⚡ Início Rápido](#inicio-rapido) • [🏛️ Arquitetura](#arquitetura) • [🗄️ Modelo de Dados](#modelo-de-dados) • [💼 Módulos](#modulos) • [📡 Endpoints da API](#endpoints-api) • [🧪 Testes](#testes)
+[⚡ Início Rápido](#inicio-rapido) • [🖼️ Telas do Sistema](#telas-do-sistema) • [🏛️ Arquitetura](#arquitetura) • [🗄️ Modelo de Dados](#modelo-de-dados) • [💼 Módulos](#modulos) • [📡 Endpoints da API](#endpoints-api) • [🧪 Testes](#testes)
+
+</div>
+
+---
+
+## 📸 Telas do Sistema
+
+<div align="center">
+
+### Painel Financeiro (Dashboard)
+Visão consolidada com indicadores de saldo, receitas/despesas do mês, evolução patrimonial e lançamentos recentes:
+<br />
+<img src="docs/screenshots/dashboard.png" alt="Dashboard Financeiro" width="900" style="border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+
+<br /><br />
+
+### Relatórios Financeiros & DRE
+Demonstração do Resultado do Exercício gerencial, controle de inadimplência e exportação de dados em CSV/Excel:
+<br />
+<img src="docs/screenshots/relatorios.png" alt="Relatórios Financeiros e DRE" width="900" style="border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+
+<br /><br />
+
+### Autenticação & Multi-Tenancy
+Telas seguras de acesso e criação de contas com isolamento completo por empresa:
+<br />
+<img src="docs/screenshots/login.png" alt="Login do Sistema" width="440" style="border-radius: 8px; margin-right: 12px;" />
+<img src="docs/screenshots/cadastro.png" alt="Cadastro de Empresa" width="440" style="border-radius: 8px;" />
+
+<br /><br />
+
+### Documentação Interativa da API (Swagger / OpenAPI)
+Catálogo completo de endpoints documentados, esquemas de DTOs e testes interativos em `/api/docs`:
+<br />
+<img src="docs/screenshots/swagger-api.png" alt="Documentação Swagger" width="900" style="border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
 
 </div>
 
@@ -24,21 +59,22 @@
 ## 📑 Sumário
 
 - [1. Visão Geral do Projeto](#visao-geral)
-- [2. Stack Tecnológica](#stack-tecnologica)
-- [3. Arquitetura e Decisões de Engenharia](#arquitetura)
-- [4. Modelo de Dados e Diagrama ER](#modelo-de-dados)
-- [5. Módulos do Sistema](#modulos)
-- [6. Estrutura de Pastas](#estrutura-de-pastas)
-- [7. Início Rápido (Passo a Passo)](#inicio-rapido)
+- [2. Telas do Sistema](#telas-do-sistema)
+- [3. Stack Tecnológica](#stack-tecnologica)
+- [4. Arquitetura e Decisões de Engenharia](#arquitetura)
+- [5. Modelo de Dados e Diagrama ER](#modelo-de-dados)
+- [6. Módulos do Sistema](#modulos)
+- [7. Estrutura de Pastas](#estrutura-de-pastas)
+- [8. Início Rápido (Passo a Passo)](#inicio-rapido)
   - [Opção A: Executando com Docker](#opcao-a-docker)
   - [Opção B: Executando Sem Docker (Nuvem Gratuita)](#opcao-b-sem-docker)
   - [Inicializando o Backend](#inicializando-backend)
   - [Inicializando o Frontend](#inicializando-frontend)
-- [8. Credenciais de Acesso (Usuário Demo)](#credenciais-demo)
-- [9. Guia de Endpoints da API](#endpoints-api)
-- [10. Execução de Testes Automatizados](#testes)
-- [11. Segurança](#seguranca)
-- [12. Licença](#licenca)
+- [9. Credenciais de Acesso (Usuário Demo)](#credenciais-demo)
+- [10. Guia de Endpoints da API](#endpoints-api)
+- [11. Execução de Testes Automatizados](#testes)
+- [12. Segurança](#seguranca)
+- [13. Licença](#licenca)
 
 ---
 
